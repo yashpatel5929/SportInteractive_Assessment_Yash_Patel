@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardBackgroundColor="@color/cardBackground">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineMiddle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/teamOneName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:text=""
+                    android:gravity ="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgVersus"
+                    app:layout_constraintBottom_toTopOf="@+id/viewUnderline" />
+
+                <ImageView
+                    android:id="@+id/imgVersus"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/versus_image"
+                    android:gravity ="center"
+                    app:layout_constraintStart_toEndOf="@+id/teamOneName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/teamTwoName"
+                    app:layout_constraintBottom_toTopOf="@+id/viewUnderline" />
+
+                <TextView
+                    android:id="@+id/teamTwoName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:text=""
+                    android:gravity ="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/viewUnderline"
+                    app:layout_constraintStart_toEndOf="@+id/imgVersus" />
+
+                <View
+                    android:id="@+id/viewUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintHorizontal_weight="5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgVersus" />
+
+                <ImageView
+                    android:id="@+id/imgCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_calendar_month_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewUnderline" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineMiddle"
+                    app:layout_constraintStart_toEndOf="@+id/imgCalendar"
+                    app:layout_constraintTop_toBottomOf="@+id/viewUnderline" />
+
+                <ImageView
+                    android:id="@+id/imgTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_access_time_filled_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgCalendar" />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineMiddle"
+                    app:layout_constraintStart_toEndOf="@+id/imgTime"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCalendar" />
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgTime" />
+
+                <TextView
+                    android:id="@+id/txtlocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:paddingBottom="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineMiddle"
+                    app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTime" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewDetail"
+                    android:theme="@style/Theme.MaterialComponents"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/button_color"
+                    app:cornerRadius="@dimen/_5sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="View Detail"
+                    android:textColor="@color/white"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewUnderline"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidelineMiddle"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
